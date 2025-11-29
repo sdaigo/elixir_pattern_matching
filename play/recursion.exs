@@ -1,4 +1,4 @@
-defmodule Play do
+defmodule Play.Recursion do
   def process([head | rest]) do
     IO.puts("Value of num  = #{head}")
     process(rest)
@@ -28,10 +28,10 @@ defmodule Play do
 end
 
 data = [1, 2, 3, 4, 5]
-data |> Play.process()
+data |> Play.Recursion.process()
 
-sum_result = data |> Play.sum(0)
+sum_result = data |> Play.Recursion.sum(0)
 "Sum of numbers = #{sum_result}" |> IO.puts()
 
-text = Play.build_text(5)
+text = Play.Recursion.build_text(5)
 text |> IO.puts()

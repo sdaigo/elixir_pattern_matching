@@ -44,6 +44,7 @@ defmodule CodeFlow.EnumShortcutTest do
         %OrderItem{quantity: 10, item: %Item{name: "Item 4", price: 11.00}},
         %OrderItem{quantity: 0, item: %Item{name: "Item 5", price: 1.00}}
       ]
+
       assert 136.25 == EnumShortcut.order_total(order_items)
     end
   end
@@ -58,8 +59,9 @@ defmodule CodeFlow.EnumShortcutTest do
         %Customer{name: "Cust 1", active: true},
         %Customer{name: "Cust 2", active: true},
         %Customer{name: "Cust 3", active: false},
-        %Customer{name: "Cust 4", active: true},
+        %Customer{name: "Cust 4", active: true}
       ]
+
       assert 3 == EnumShortcut.count_active(customers)
     end
   end
